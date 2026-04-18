@@ -1,7 +1,51 @@
+import { useState } from "react";
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/toqeerazam.1545@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
+      }
+    } catch (error) {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
+  };
+
   return (
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
@@ -68,22 +112,24 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-col">
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input type="text" placeholder="John Doe" />
+                  <input type="text" name="name" placeholder="John Doe" value={formData.name} onChange={handleChange} required />
                 </div>
                 <div className="form-group">
                   <label>Your Email</label>
-                  <input type="email" placeholder="john@example.com" />
+                  <input type="email" name="email" placeholder="john@example.com" value={formData.email} onChange={handleChange} required />
                 </div>
               </div>
               <div className="form-group">
                 <label>Your Message</label>
-                <textarea placeholder="Tell me about your project..."></textarea>
+                <textarea name="message" placeholder="Tell me about your project..." value={formData.message} onChange={handleChange} required></textarea>
               </div>
-              <button type="submit" className="form-submit-btn">Send Message</button>
+              <button type="submit" className="form-submit-btn" disabled={status === "submitting"}>
+                {status === "submitting" ? "Sending..." : status === "success" ? "Message Sent!" : status === "error" ? "Error! Try Again" : "Send Message"}
+              </button>
             </form>
           </div>
         </div>
