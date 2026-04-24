@@ -21,7 +21,7 @@ const Career = () => {
               <h3>2024 - Present</h3>
             </div>
             <p>
-              Working on web development since 2024. Developed full-stack applications and responsive websites using React, Node.js, SQLite, Python, and C++. Handled deployments for Rehman Medical Complex & TRA Center Pharmacy, alongside designing social media posts and branding materials.
+              Working on web development since 2024. Developed full-stack applications and responsive websites using HTML, CSS, JavaScript, React, Node.js, SQLite, Python, and C++. Handled deployments for Rehman Medical Complex & TRA Center Pharmacy, alongside designing social media posts and branding materials.
             </p>
           </div>
           <div className="career-info-box">
