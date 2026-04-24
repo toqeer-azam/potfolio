@@ -54,7 +54,7 @@ const Work = () => {
         </h2>
         <div className="work-flex">
           {[
-            { name: "Pharmacy System", category: "Web Apps", tools: "React, Node.js, SQLite", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
+            { name: "Pharmacy System", category: "Web Apps", tools: "React, Node.js, SQLite", img: ["/images/pharmacy1.png", "/images/pharmacy2.png", "/images/pharmacy3.png", "/images/pharmacy4.png"], link: "https://github.com/toqeer-azam" },
             { name: "Unreal Engine 5 Game", category: "Game Dev", tools: "C++, Blueprints, UE5", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
             { name: "Automated Email System", category: "ML & AI", tools: "Python, SMTP", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
             { name: "E-Commerce Website", category: "Web Store", tools: "WordPress, WooCommerce, PHP", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
