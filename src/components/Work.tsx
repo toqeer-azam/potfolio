@@ -58,7 +58,7 @@ const Work = () => {
             { name: "Unreal Engine 5 Game", category: "Game Dev", tools: "C++, Blueprints, UE5", img: "/images/ue5.png", link: "https://github.com/toqeer-azam" },
             { name: "Automated Email System", category: "ML & AI", tools: "Python, SMTP", img: "/images/email.jfif", link: "https://github.com/toqeer-azam" },
             { name: "E-Commerce Website", category: "Web Store", tools: "WordPress, WooCommerce, PHP", img: "/images/ecom.png", link: "https://github.com/toqeer-azam" },
-            { name: "C++ 2D Game", category: "Game Dev", tools: "C++", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
+            { name: "C++ 2D Game", category: "Game Dev", tools: "C++", img: "/images/2dgame.png", link: "https://github.com/toqeer-azam" },
             { name: "Certificate Sender", category: "Python App", tools: "Python, Streamlit", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
           ].map((project, index) => (
             <div className="work-box" key={index}>
