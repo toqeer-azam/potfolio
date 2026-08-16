@@ -54,12 +54,12 @@ const Work = () => {
         </h2>
         <div className="work-flex">
           {[
-            { name: "Pharmacy System", category: "Web Apps", tools: "React, Node.js, SQLite", img: ["/images/pharmacy1.png", "/images/pharmacy2.png", "/images/pharmacy3.png", "/images/pharmacy4.png"], link: "https://github.com/toqeer-azam" },
-            { name: "Unreal Engine 5 Game", category: "Game Dev", tools: "C++, Blueprints, UE5", img: "/images/ue5.png", link: "https://github.com/toqeer-azam" },
-            { name: "Automated Email System", category: "ML & AI", tools: "Python, SMTP", img: "/images/email.jfif", link: "https://github.com/toqeer-azam" },
+            { name: "Hospital/Pharmacy POS System", category: "Web Apps", tools: "React, Node.js, SQLite", img: ["/images/pharmacy1.png", "/images/pharmacy2.png", "/images/pharmacy3.png", "/images/pharmacy4.png"], link: "https://github.com/toqeer-azam" },
+            { name: "Hack-and-Slash RPG (FYP)", category: "Game Dev", tools: "C++, Unreal Engine 5, Blueprints", img: "/images/ue5.png", link: "https://github.com/toqeer-azam" },
+            { name: "3D Café Ordering App", category: "3D Web App", tools: "React, Three.js", img: "/images/2dgame.png", link: "https://github.com/toqeer-azam" },
             { name: "E-Commerce Website", category: "Web Store", tools: "WordPress, WooCommerce, PHP", img: "/images/ecom.png", link: "https://github.com/toqeer-azam" },
-            { name: "C++ 2D Game", category: "Game Dev", tools: "C++", img: "/images/2dgame.png", link: "https://github.com/toqeer-azam" },
-            { name: "Certificate Sender", category: "Python App", tools: "Python, Streamlit", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
+            { name: "Automated Email System", category: "Python & AI", tools: "Python, SMTP", img: "/images/email.jfif", link: "https://github.com/toqeer-azam" },
+            { name: "Certificate Sender", category: "Python Tool", tools: "Python, Streamlit", img: "/images/placeholder.webp", link: "https://github.com/toqeer-azam" },
           ].map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
