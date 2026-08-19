@@ -15,6 +15,18 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
+                <h4>Full Stack Developer</h4>
+                <h5>Optima Solutions</h5>
+              </div>
+              <h3>Sep 2025 - Aug 2026</h3>
+            </div>
+            <p>
+              Worked as a Full Stack Developer from September 2025 to August 2026. Built multiple websites as part of the development team across the full stack with React and Node.js, collaborating on feature development, fixes, and client delivery.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
                 <h4>Freelance Web & POS Developer</h4>
                 <h5>Self-Employed</h5>
               </div>
@@ -42,7 +54,7 @@ const Career = () => {
                 <h4>BS, Software Engineering</h4>
                 <h5>BUITEMS, Quetta, Pakistan</h5>
               </div>
-              <h3>Graduated 2026</h3>
+              <h3>Graduated</h3>
             </div>
             <p>
               Studied Software Engineering with focus on full-stack web applications, game development (Unreal Engine 5 / C++), AI & data tooling in Python.
